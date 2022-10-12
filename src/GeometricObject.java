@@ -1,3 +1,4 @@
+import java.awt.Color;
 public class GeometricObject {
     Vertex pos;
     double width;
@@ -95,13 +96,16 @@ public class GeometricObject {
         return false;
     }
 
-    /* Lukas */
     public boolean schneidet(GeometricObject that) {
 
         Vertex newV = new Vertex(this.pos.x - that.width, this.pos.y - that.height);
         GeometricObject big = new GeometricObject(newV, this.width + that.width, this.height + that.height);
         return big.contains(that.pos);
 
+    }
+
+    public void setColor(Color c){
+        Color myColor = new Color(0, 0, 0);
     }
 
 }

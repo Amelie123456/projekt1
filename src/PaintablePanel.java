@@ -1,3 +1,4 @@
+
 import util.ShowInFrame;
 public class PaintablePanel extends SizedPanel{
     
@@ -12,6 +13,7 @@ public class PaintablePanel extends SizedPanel{
     public static void main(String[]args){
         ShowInFrame.show(new PaintablePanel(new PaintableOval(100,50,30,50)));
     }
+    
     
     
 }

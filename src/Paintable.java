@@ -1,5 +1,5 @@
 public interface Paintable {
 
-    void paintTo (java.awt.Graphics g);
+   public void paintTo (java.awt.Graphics g);
     
 }

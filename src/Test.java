@@ -9,6 +9,7 @@ public class Test {
         System.out.println(dreieck);
         System.out.println(dreieck.area());
         
+        
 
         
 

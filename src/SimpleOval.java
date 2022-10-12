@@ -16,7 +16,8 @@ public class SimpleOval extends GeometricObject {
     @Override
     public String toString() {
         return "SimpleOval" + super.toString();
-
     }
+
+    
 
 }
