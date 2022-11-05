@@ -1,26 +1,29 @@
-
-import util.ShowInFrame;
 import javax.swing.*;
 
+import util.ShowInFrame;
+
 import java.awt.Dimension;
+
 public class SizedPanel extends JPanel {
 
-    int preferredwidth=1500;
-    int preferredheight=1000;
+    int preferredWidth = 1500;
+    int preferredHeight = 1000;
 
-    public SizedPanel(int w, int h){
-        preferredwidth=w;
-        preferredheight=h;
+    public SizedPanel(int w, int h) {
+        preferredWidth = w;
+        preferredHeight = h;
     }
-    public SizedPanel(){}
-    
+
+    public SizedPanel() {
+    }
+
     @Override
-    public Dimension getPreferredSize(){
-        return new Dimension(preferredwidth,preferredheight);
+    public Dimension getPreferredSize() {
+        return new Dimension(preferredWidth, preferredHeight);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ShowInFrame.show(new SizedPanel());
-    }
-    }
 
+    }
+}

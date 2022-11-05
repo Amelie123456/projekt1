@@ -1,13 +1,16 @@
 import java.awt.Color;
+
 public class GeometricObject {
     Vertex pos;
     double width;
     double height;
+    public Color color;
 
-    public GeometricObject(Vertex pos, double width, double height) {
+    public GeometricObject(Vertex pos, double width, double height, Color color) {
         this.pos = pos;
         this.width = width;
         this.height = height;
+        this.color = color;
 
         if (width < 0) {
             this.width = -width;
@@ -27,7 +30,7 @@ public class GeometricObject {
     }
 
     public GeometricObject(double x, double y, double width, double height) {
-        this(new Vertex(x, y), width, height);
+        this(new Vertex(x, y), width, height, new Color(0, 0, 0));
     }
 
     public GeometricObject(double width, double height) {
@@ -36,6 +39,10 @@ public class GeometricObject {
 
     public GeometricObject(double width) {
         this(width, width);
+    }
+
+    public GeometricObject(Vertex v) {
+        this(v, 0, 0, new Color(0, 0, 0));
     }
 
     public GeometricObject() {
@@ -99,13 +106,10 @@ public class GeometricObject {
     public boolean schneidet(GeometricObject that) {
 
         Vertex newV = new Vertex(this.pos.x - that.width, this.pos.y - that.height);
-        GeometricObject big = new GeometricObject(newV, this.width + that.width, this.height + that.height);
+        GeometricObject big = new GeometricObject(newV, this.width + that.width, this.height + that.height,
+                new Color(0, 0, 0));
         return big.contains(that.pos);
 
-    }
-
-    public void setColor(Color c){
-        Color myColor = new Color(0, 0, 0);
     }
 
 }
